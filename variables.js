@@ -9,11 +9,11 @@ console.log(y)
 
 // y = 2468
 // console.log(y)
-
-var z = 279 //1St modification
+var z = 999
+z = 456
 console.log(z)
 
-z = 999 // 2nd Modification
+// 2nd Modification
 console.log(z)
 function show() {
     let z = 135
@@ -22,4 +22,3 @@ function show() {
 
 show()
 
-console.log(z)

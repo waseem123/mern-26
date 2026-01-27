@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let num = prompt('ENTER A NUMBER')
+    // console.log(num+2)
+    let temp = num
+    let count = 0
+    while (temp != 0) {  //0!=0 => true
+        temp = parseInt(temp / 10)
+        count++  //3
+    }
+    console.log('THERE ARE ' + count + ' DIGITS IN THE NUMBER - ' + num)
+</script>
+
+<script>
+    for (let i = 101; i < 201; i++) {
+        console.log(i)
+        document.writeln('<h1>' + i + '</h1>')
+    }
+
+    let n = 4
+    let fact = 1
+    for (let i = 1; i <= n; i++) {
+        fact = fact * i
+    }
+    console.log('Factorial is ' + fact)
+</script>
+
+<script>
+    let myarr = [100, 200, 300, 400, 500, 600, 700, 800]
+    for (let i = 0; i < myarr.length; i++) {
+        console.log(myarr[i])
+    }
+
+    myarr.forEach(xyz => {
+        console.log(xyz)
+    });
+</script>
+
+</html>
