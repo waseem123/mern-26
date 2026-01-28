@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let cities = ['Solapur', 'Pune', 'Mumbai', 'Bengaluru', 'Baramati']
+    console.log(cities)
+
+    // Array Insertion
+    cities.push('Hyderabad')
+    console.log(cities)
+    let x = cities.push('Nasik', 'Nagpur', 'Dharashiv')
+    console.log(cities)
+    console.log(x)
+
+    cities.unshift('Latur')
+    console.log(cities)
+
+    x = cities.unshift("Chennai", 'Kolkata', 'Aurangabad', 'Gulbarga')
+    console.log(cities)
+    console.log(x)
+
+    // Array Updation
+    cities[5] = 'Vijaypura'
+    console.log(cities)
+
+    cities[14] = "Lucknow"
+    console.log(cities)
+
+    cities[100] = 'Goa' // Array will create and occupy empty blocks of memory
+    console.log(cities)
+
+    cities.pop()
+    console.log(cities)
+    x = cities.pop()
+    console.log(cities)
+    console.log(x)
+    cities.pop()
+    console.log(cities)
+    
+    cities.shift()
+    console.log(cities)
+    x = cities.shift()
+    console.log(cities)
+    console.log(x)
+
+    console.log(cities.includes('Mumbai',0))
+
+    cities.flat(1)
+    console.log(cities)
+</script>
+
+</html>
