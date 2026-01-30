@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let arr = ['Orange', 'Banana', 'Grapes', 'Apple', 'Pineapple', 'Mango', 'Kiwi', 'Watermelon']
+    console.log(arr)
+
+    let x = arr.slice(0, 5)
+    console.log(x)
+
+    console.log(arr)
+
+    console.log(arr.slice(3, 6))
+    console.log(arr.slice(3))
+    console.log(arr.slice(0, 1))
+
+</script>
+
+
+<script>
+    console.log(arr)
+    let y = arr.splice(0,3)
+    console.log(y)
+    console.log(arr)
+
+    arr.splice(0,2,'Dragonfruit')
+    console.log(arr)
+
+    arr.splice(2,2,'Cherry')
+    console.log(arr)
+
+    arr.splice(1,1,'Muskmelon','Guava','Blueberry')
+    console.log(arr)
+
+    arr.splice(0,0,'Raspberry','Strawberry','Mulberry')
+    console.log(arr)
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [11, 22, 33, 44, 55, 66]
+    console.log(arr)
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = arr[i] * 2
+    // }
+    console.log(arr)
+
+    console.log(arr.map(function (n) {
+        return n * 2
+    })
+    )
+
+    console.log('-----------------')
+
+
+    console.log(arr.filter(function (val) {
+        return val % 2 === 0
+    }))
+</script>
+
+<script>
+    let myarr = ['Raspberry', 'Strawberry', 'Mulberry', 'Dragonfruit', 'Muskmelon', 'Guava', 'Blueberry', 'Cherry']
+
+    console.log(myarr.map(function (f) {
+        return 'fruit - ' + f
+    }))
+
+    document.write(myarr.map(function (f) {
+        return `<h1>${f}</h1><p>${f} is a very healthy fruit</p>`
+    }))
+</script>
+
+
+
+<script>
+    let a = 30
+    let b = "65"
+
+    console.log(a)
+    console.log(b)
+
+    console.log(a==b)
+    console.log(a===b)
+</script>
+</html>
