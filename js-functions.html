@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function showAlert() {
+        console.log('Function Exection')
+        let x = 100
+        let y = 20
+        console.log(x + y)
+    }
+
+    showAlert()
+    showAlert()
+    showAlert()
+
+
+    const myfunction = function () {
+        return 300 - 150
+    }
+
+    console.log(myfunction())
+
+    function getDouble(n) {
+        console.log(n * 2)
+    }
+
+    getDouble(35)
+
+    function getTriple(num) {
+        return num + num + num
+    }
+
+    console.log(getTriple(6))
+
+
+</script>
+
+<script>
+    let isPrime = (num) => {
+        let d = num / 2
+        for (let i = 2; i < d; i++) {
+            if (num % i == 0) {
+                return false
+            }
+        }
+        return true
+    }
+
+    let n = parseInt(prompt('ENTER A NUMBER - '))
+    if (isPrime(n) == true) {
+        console.log(`NUMBER IS PRIME`)
+    } else {
+        console.log(`NUMBER IS NOT PRIME`)
+    }
+</script>
+
+<script>
+    function demo(x,y=5){
+        return x * y
+    }
+
+    console.log(demo(10,6))
+</script>
+
+</html>
