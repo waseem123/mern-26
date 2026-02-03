@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let student = {
+        name: 'Sam',
+        city: 'Paris',
+        rollno: 102,
+        std: 2,
+        getName: function () {
+            return this.name + this.city
+        }
+    }
+
+    console.log(student)
+    console.log(student.name)
+    console.log(student.city)
+    console.log(student.rollno)
+    console.log(student.std)
+
+    console.log(student['name'])
+    console.log(student['city'])
+    console.log(student['rollno'])
+    console.log(student['std'])
+
+    student['grades'] = 9.8
+    console.log(student.grades)
+
+    student['contact'] = [901234567, 902462469]
+    console.log(student)
+
+    for (const s in student) {
+        console.log(`${s} -> ${student[s]}`)
+    }
+
+    console.log(student.getName())
+</script>
+
+</html>
