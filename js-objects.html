@@ -11,38 +11,39 @@
 
 </body>
 <script>
-    let student = {
-        name: 'Sam',
-        city: 'Paris',
-        rollno: 102,
-        std: 2,
-        getName: function () {
-            return this.name + this.city
-        }
+    let pen = {
+        ink: "Blue",
+        brand: "Camlin",
+        type: "White Board Marker",
+        color: "White and Blue",
+        price: 35,
+        available_varients: ['Red', 'Green', 'Black']
     }
 
-    console.log(student)
-    console.log(student.name)
-    console.log(student.city)
-    console.log(student.rollno)
-    console.log(student.std)
+    console.log(pen)
 
-    console.log(student['name'])
-    console.log(student['city'])
-    console.log(student['rollno'])
-    console.log(student['std'])
+    console.log(pen.type)
+    console.log(pen.ink)
 
-    student['grades'] = 9.8
-    console.log(student.grades)
+    console.log(pen['color'])
+    console.log(pen['price'])
 
-    student['contact'] = [901234567, 902462469]
-    console.log(student)
+    console.log(pen.available_varients)
 
-    for (const s in student) {
-        console.log(`${s} -> ${student[s]}`)
+    for (const key in pen) {
+        document.write(`${key} -> ${pen[key]}<br>`)
     }
 
-    console.log(student.getName())
+    [
+        pen['refill_price'],
+        pen['linewidth']
+    ] = [
+            20,
+            '2.5mm'
+        ]
+    console.log(pen)
+
+    
 </script>
 
 </html>

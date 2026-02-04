@@ -1,0 +1,23 @@
+<script>
+    let myFunctions = [function (a, b) {
+        return a + b
+    },
+    function (d, e) {
+        return d * e
+    }
+    ]
+
+    console.log(myFunctions)
+    console.log(myFunctions[0](10, 2))
+
+
+    let x = (a, b) => {
+        return a / b
+    }
+
+    let y = (a, b) => { return a % b }
+
+    let z = [x, y]
+
+    console.log(z[0](10,2))
+</script>
