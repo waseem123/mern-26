@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Student {
+        constructor(name = "Waseem", city = "Solapur", marks = 88) {
+            this.name = name
+            this.city = city
+            this.marks = marks
+        }
+
+        setName(name) {
+            this.name = name
+        }
+        getName() {
+            return this.name
+        }
+
+        setCity(city) {
+            this.city = city
+        }
+        getCity() {
+            return this.city
+        }
+
+        setMarks(marks) {
+            this.marks = marks
+        }
+        getMarks() {
+            return this.marks
+        }
+    }
+
+    s1 = new Student();
+    console.log(s1)
+
+    s2 = new Student("Prathamesh", "Mumbai", 89)
+    console.log(s2)
+
+    s3 = new Student()
+    s3.setName("Khadeja")
+    s3.setCity("Pune")
+    s3.setMarks(81)
+    console.log(s3.getName())
+    console.log(s3.getCity())
+    console.log(s3.getMarks())
+
+    s2.setName("Prathamesh Ohol")
+    console.log(s2.getName())
+</script>
+
+</html>
