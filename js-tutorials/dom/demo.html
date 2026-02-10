@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myheading">DOM Operations</h1>
+    <p id="myparagraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam quam fuga corrupti molestiae magnam
+        placeat fugit quibusdam voluptatibus et earum, ratione consequuntur sunt sit? Eum dolorem suscipit amet
+        officiis.
+    </p>
+    <hr>
+    <input type="text" id="heading" placeholder="Heading">
+    <input type="text" id="paragraph" placeholder="Paragraph">
+    <button id="btn_change">CHANGE</button>
+</body>
+<script>
+    let heading = document.querySelector('#myheading')
+    let paragraph = document.querySelector('#myparagraph')
+    let btn_change = document.querySelector('#btn_change')
+
+    btn_change.addEventListener('click', () => {
+        let headingInput = document.querySelector('#heading').value
+        let paragraphInput = document.querySelector('#paragraph').value
+
+        let oldHeading = heading.innerText
+        let oldParagraph = paragraph.innerText
+
+        if (headingInput != "" && paragraphInput != "") {
+            heading.innerText = headingInput
+            paragraph.innerText = paragraphInput
+        } else {
+            if (headingInput == "" && paragraphInput == "") {
+                heading.innerText = oldHeading
+                paragraph.innerText = oldParagraph
+            } else if (headingInput == "") {
+                heading.innerText = oldHeading
+                paragraph.innerText = paragraphInput
+            } else {
+                heading.innerText = headingInput
+                paragraph.innerText = oldParagraph
+            }
+        }
+    })
+
+</script>
+
+</html>

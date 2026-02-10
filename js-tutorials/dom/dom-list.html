@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="countryinput">
+    <button id="btn_add">Add</button>
+    <hr>
+    <ol id="countrylist"></ol>
+</body>
+<script>
+
+    let btn_add = document.querySelector('#btn_add')
+    let countrylist = document.querySelector('#countrylist')
+    let countries = ""
+    btn_add.addEventListener('click', () => {
+        let countryinput = document.querySelector('#countryinput').value
+        countries += "<li>"+countryinput+"</li>"
+
+        console.log(countries)
+        countrylist.innerHTML = countries
+    })
+</script>
+
+</html>
