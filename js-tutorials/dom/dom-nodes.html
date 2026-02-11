@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            padding: 16px;
+            border-radius: 8px;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="myheading">Heading</h1>
+    <p id="myparagraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis vel autem, odit quae, sit fuga
+        veniam impedit exercitationem recusandae temporibus totam itaque. Ratione voluptatum vero neque ab dolorem
+        tempora.
+    </p>
+
+    <div class="container">
+        <div>
+            <label for="">Font Family</label><br>
+            <select name="" id="font_family">
+                <option value="arial">Arial</option>
+                <option value="calibri">Calibri</option>
+                <option value="times">Times</option>
+                <option value="monospace">Monospace</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Font Size</label><br>
+            <select name="" id="font_size">
+                <option value="16px">16px</option>
+                <option value="24px">24px</option>
+                <option value="48px">48px</option>
+                <option value="64px">64px</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Font Color</label><br>
+            <input type="color" id="font_color">
+        </div>
+        <button id="add_style_btn">Add Style</button>
+    </div>
+
+</body>
+<script>
+    let heading = document.querySelector('#myheading')
+    let paragraph = document.querySelector('#myparagraph')
+    let add_style_btn = document.querySelector('#add_style_btn')
+
+
+    let font_family = document.querySelector('#font_family')
+
+    let font_size = document.querySelector('#font_size')
+
+    let font_color = document.querySelector('#font_color')
+
+
+    font_family.addEventListener('change',()=>{
+        paragraph.style.fontFamily = font_family.value
+    })
+    font_size.addEventListener('change',()=>{
+        paragraph.style.fontSize = font_size.value
+    })
+
+    font_color.addEventListener('change',()=>{
+        paragraph.style.color = font_color.value
+    })
+
+    add_style_btn.addEventListener('click', () => {
+        paragraph.style.fontFamily = font_family.value
+        paragraph.style.fontSize = font_size.value
+        paragraph.style.color = font_color.value
+        // document.write(font_family.value+" "+font_size.value+" "+font_color.value)
+    })
+</script>
+
+</html>
