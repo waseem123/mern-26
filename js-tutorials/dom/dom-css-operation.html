@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        selector.style.property = value;
+    </pre>
+    <button id="btn_style">Add Style</button> |
+    <select name="" id="img_width">
+        <option value="25%">25%</option>
+        <option value="50%">50%</option>
+        <option value="75%">75%</option>
+        <option value="100%">100%</option>
+    </select> |
+    <select name="" id="img_shape">
+        <option value="0px">Square</option>
+        <option value="8px">Rounded Corners</option>
+        <option value="50%">Circle</option>
+    </select> |
+
+    <select name="" id="img_shadow">
+        <option value="false">No Shadow</option>
+        <option value="true">Shadow</option>
+    </select> |
+
+    <br>
+
+    <img id="myimage" src="berries.jpg" alt="">
+</body>
+<script>
+    let btn_style = document.querySelector('#btn_style')
+    let myimage = document.querySelector('#myimage')
+
+    btn_style.addEventListener('click', () => {
+        myimage.style.width = "200px"
+        myimage.style.height = "200px"
+        myimage.style.borderRadius = "50%"
+    })
+</script>
+
+<script>
+    let img_width = document.querySelector('#img_width')
+    let img_shape = document.querySelector('#img_shape')
+    let img_shadow = document.querySelector('#img_shadow')
+
+    img_width.addEventListener('change', () => {
+        myimage.style.width = img_width.value
+    })
+
+    img_shape.addEventListener('change', () => {
+        myimage.style.borderRadius = img_shape.value
+    })
+
+    img_shadow.addEventListener('change', (e) => {
+        console.log(e.target.value)
+        const shadow = e.target.value
+        if (shadow=="true") {
+            myimage.style.boxShadow = "8px 8px 8px lightgray"
+        }
+        else {
+            console.log('hi')
+            myimage.style.boxShadow = "none"
+        }
+    })
+</script>
+
+</html>

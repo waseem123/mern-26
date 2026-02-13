@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button id="btn_add">ADD</button>
+    <p id="output"></p>
+</body>
+
+<script>
+    let btn = document.querySelector('#btn_add')
+    btn.addEventListener('click', () => {
+        let n1 = parseFloat(document.querySelector('#input1').value)
+        let n2 = parseFloat(document.querySelector('#input2').value)
+        let result = n1 + n2
+        let output = document.querySelector('#output')
+        output.innerText = `ADDITION OF ${n1} AND ${n2} IS ${result}`
+    })
+</script>
+
+</html>

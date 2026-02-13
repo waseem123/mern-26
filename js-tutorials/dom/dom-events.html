@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myheading">Heading</h1>
+    <p id="myparagraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim modi porro atque suscipit! Iusto accusamus vitae
+        veritatis minus distinctio. Facere, temporibus velit aperiam quas natus magnam eaque eius blanditiis tempore.
+    </p>
+    <button onmouseenter="alert('hi')" onmouseout="showdata()">Click Me</button>
+</body>
+<script>
+    function showdata(){
+        console.log(document.getElementById('myheading').innerText)
+        console.log(document.getElementById('myparagraph').innerText)
+    }
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pstyle{
+            background-color: crimson;
+            color: white;
+            padding: 8px;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading1">Query Selectors</h1>
+    <p id="paragraph1" class="pstyle">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita corrupti ut voluptatum eveniet, et tenetur
+        nisi perferendis similique voluptates possimus optio voluptatibus vero itaque repudiandae dolores quo illo ullam
+        totam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, explicabo, laboriosam ut doloribus fugit illo quidem, amet nesciunt numquam iusto velit possimus? Iste eius quae quia, a molestiae laudantium nihil.
+    </p>
+    <p class="pstyle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quisquam inventore optio sint, exercitationem doloribus possimus consequatur voluptate tempora dolor quos esse amet placeat libero iure officia aspernatur velit praesentium.
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi molestiae nobis earum sed vel ut est laboriosam, perspiciatis quaerat cupiditate maxime, explicabo autem suscipit facilis mollitia labore corporis omnis? Laudantium.
+    </p>
+
+    <button id="btn1">Show Alert</button>
+</body>
+<script>
+    let heading = document.querySelector('#heading1')
+    console.log(heading)
+
+    console.log(document.querySelector('#paragraph1'))
+
+    let styledparagraph = document.querySelectorAll('.pstyle')
+    console.log(styledparagraph)
+
+    document.querySelector('#paragraph1').innerText = "Hi. how are you?"
+</script>
+
+<script>
+    let btn1 = document.querySelector('#btn1')
+    btn1.addEventListener('click',()=>{
+        alert("Hi! Event Captured.")
+    })
+</script>
+
+</html>
