@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 16px;
+            padding: 8px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #mydiv {
+            background-color: rgb(5, 97, 66);
+            color: white;
+        }
+
+        #d1,
+        #d2,
+        #d3 {
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        button {
+            border: 1px solid black;
+            padding: 8px;
+            margin: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+        <div id="d1">
+            <h1>Heading 1</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsum nam modi delectus velit odit neque
+                sed magni enim? Doloribus officiis incidunt aliquid odio officia deserunt, temporibus odit quibusdam
+                vero!
+            </p>
+        </div>
+
+        <div id="d2">
+            <h1>Heading 2</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis ducimus voluptatum facere officia
+                reprehenderit laborum ex? Minima delectus, mollitia illum cum nihil facilis nemo necessitatibus
+                voluptate eum amet. Repudiandae, fuga!
+            </p>
+        </div>
+
+        <div id="d3">
+            <h1>Heading 3</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis ducimus voluptatum facere officia
+                reprehenderit laborum ex? Minima delectus, mollitia illum cum nihil facilis nemo necessitatibus
+                voluptate eum amet. Repudiandae, fuga!
+            </p>
+        </div>
+    </div>
+
+    <button id="btn_click">CLICK ME</button>
+</body>
+<script>
+    let button = document.querySelector('#btn_click')
+    let mydiv = document.querySelector('#mydiv')
+    let firstdiv = mydiv.firstElementChild  //d1
+    let seconddiv = mydiv.lastElementChild  // d3
+
+    function changeBackground(firstcolor,secondcolor,thirdcolor) {
+        firstdiv.style.backgroundColor = firstcolor
+        mydiv.parentElement.style.backgroundColor = secondcolor
+        seconddiv.style.backgroundColor = thirdcolor
+
+    }
+    button.addEventListener('click', function () {
+        console.log(mydiv.childNodes)
+        changeBackground('red','black','orange')
+    })
+
+    button.addEventListener('dblclick', function () {
+        console.log(mydiv.childNodes)
+        changeBackground('','','')
+    })
+
+    firstdiv.addEventListener('mousedown', (e) => {
+        let nextdiv = e.target.nextElementSibling
+        console.log(nextdiv)
+        nextdiv.style.backgroundColor = "magenta"
+    })
+
+    firstdiv.addEventListener('mouseup', (e) => {
+        let nextdiv = e.target.nextElementSibling
+        console.log(nextdiv)
+        nextdiv.style.backgroundColor = ""
+    })
+
+    seconddiv.addEventListener('mouseenter', (e) => {
+        let prevdiv = e.target.previousElementSibling
+        prevdiv.style.transform = "scale(0.5)"
+    })
+
+    seconddiv.addEventListener('mouseout', (e) => {
+        let prevdiv = e.target.previousElementSibling
+        prevdiv.style.transform = "scale(1)"
+    })
+</script>
+
+</html>
