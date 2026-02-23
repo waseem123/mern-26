@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 24px;
+        }
+
+        button {
+            padding: 8px;
+            font-size: 24px;
+        }
+
+        li {
+            padding: 8px;
+            font-size: 24px;
+            /* background-color: rgb(18, 92, 92);
+            color: white;
+            border-bottom: 1px solid white; */
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="myinput" placeholder="Enter item">
+    <button id="appendbtn">Append Item</button>
+    <button id="prependbtn">Prepend Item</button>
+    <button id="removebtn">REMOVE Item</button>
+    <hr>
+    <ol id="mylist"></ol>
+</body>
+<script>
+    let myinput = document.querySelector('#myinput')
+    let appendbtn = document.querySelector('#appendbtn')
+    let prependbtn = document.querySelector('#prependbtn')
+    let mylist = document.querySelector('#mylist')
+    let removebtn = document.querySelector('#removebtn')
+
+    // step 1 : Add the eventlistener on button
+    appendbtn.addEventListener('click', () => {
+        // step 2 : Grab the text from the input
+        let data = myinput.value
+
+        // step 3 : Create a list item node <li>
+        let itemNode = document.createElement('li')
+
+        // step 4 : Append the text to the li node
+        itemNode.append(data)
+
+        // step 5 : Append the li node to the parent node UL
+        mylist.appendChild(itemNode)
+
+        myinput.value = ''
+        myinput.focus()
+    })
+
+    // step 1 : Add the eventlistener on button
+    prependbtn.addEventListener('click', () => {
+        // step 2 : Grab the text from the input
+        let data = myinput.value
+        console.log(data)
+        // step 3 : Create a list item node <li>
+        let itemNode = document.createElement('li')
+
+        // step 4 : Append the text to the li node
+        itemNode.append(data)
+
+        // step 5 : Append the li node to the parent node UL
+        mylist.prepend(itemNode)
+
+        myinput.value = ''
+        myinput.focus()
+    })
+
+    removebtn.addEventListener('click',()=>{
+        let itemnode = mylist.lastChild
+        mylist.removeChild(itemnode)
+    })
+
+</script>
+
+</html>
