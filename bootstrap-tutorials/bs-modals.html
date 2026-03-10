@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-4">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">Launch Modal</button>
+                <div class="modal fade" id="mymodal">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Bootrap Modals</h5>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                Before getting started with Bootstrap’s modal component, be sure to read the following
+                                as our menu options have recently changed.
+
+                                Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else
+                                in the document and remove scroll from the
+                                so that modal content scrolls instead.
+
+                                To achieve the same effect, use some custom JavaScript:
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">CANCEL</button>
+                                <button class="btn btn-success">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <button class="btn btn-primary" data-bs-target="#gridmodal" data-bs-toggle="modal">Launch Modal with
+                    GRID</button>
+                <div class="modal fade" id="gridmodal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class="row my-3">
+                                    <div class="col-4">
+                                        <img src="img/berries.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="img/catering.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="img/hotel.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <div class="col-4">
+                                        <img src="img/berries.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="img/catering.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="img/hotel.jpg" class="img-fluid rounded" style="height: 150px;"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    // let x = confirm("Do you want to delete the data?")
+    // if(x){
+    //     alert("DELETION SUCCESS")
+    // }else{
+    //     alert("DELETION FAILURE")
+    // }
+</script>
+
+</html>
