@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-4 card card-body">
+                <button data-bs-ptitle="C Programming"
+                    data-bs-pdesc="C is a powerful general-purpose, procedural programming language developed by Dennis Ritchie in 1972 at Bell Labs. Originally designed to build the UNIX operating system, it remains a foundational language for system-level software today. "
+                    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#programmingmodal">C
+                    Programming</button>
+            </div>
+            <div class="col-4 card card-body">
+                <button data-bs-ptitle="JAVA Programming"
+                    data-bs-pdesc="Java is a high-level, object-oriented programming language first released by Sun Microsystems (now owned by Oracle) in 1995."
+                    class="btn btn-success" data-bs-toggle="modal" data-bs-target="#programmingmodal">JAVA
+                    Programming</button>
+            </div>
+            <div class="col-4 card card-body">
+                <button data-bs-ptitle="PYTHON Programming"
+                    data-bs-pdesc="Python is a high-level, interpreted programming language known for its simple, English-like syntax and vast ecosystem. As of 2026, it remains the #1 programming language globally on the TIOBE Index, primarily driven by its dominance in Artificial Intelligence (AI) and Data Science. "
+                    class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#programmingmodal">PYTHON
+                    Programming</button>
+            </div>
+
+            <div class="modal fade" id="programmingmodal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"></h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    let programmingmodal = document.querySelector('#programmingmodal')
+    if (programmingmodal) {
+        programmingmodal.addEventListener('show.bs.modal', (event) => {
+            // step 1
+            const button = event.relatedTarget
+
+            // step 2 - Capture the data from that related button
+            const pTitle = button.getAttribute('data-bs-ptitle')
+            const pDesc = button.getAttribute('data-bs-pdesc')
+
+            // step 3 - Initialize modal header and body variables
+            let modalTitle = document.querySelector('.modal-title')
+            let modalBody = document.querySelector('.modal-body')
+
+            modalTitle.innerHTML = pTitle
+            modalBody.innerHTML = pDesc
+        })
+    }
+</script>
+
+</html>
