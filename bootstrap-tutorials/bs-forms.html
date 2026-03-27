@@ -6,23 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
+        <div class="row my-5">
+            <div class="col-6">
+                <div class="card shadow-lg">
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="">Username</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" placeholder="Enter your username" type="text">
                         </div>
 
                         <div class="mb-3">
                             <label for="">Email</label>
-                            <input type="text" class="form-control">
+                            <input type="text" placeholder="username@example.com" class="form-control form-control-lg">
                         </div>
+                        <div class="mb-3">
+                            <label for="">City</label>
+                            <select class="form-select form-select-lg" name="" id="">
+                                <option value="Solapur">Solapur</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="file" class="form-control" accept=".png, .xlsx">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">Time</label>
+                            <input type="time" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">Range</label>
+                            <input id="myrange" min="100" max="2000" step="200" type="range" class="form-range">
+                            <div id="range" class="float-end">0</div>
+                        </div>
+
+                        <div class="mb-3 input-group">
+                            <select name="" id="" class="form-control">
+                                <option value="Solapur">Solapur</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                            <input type="text" class="form-control">
+                            <button class="btn btn-primary">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="mb-3 form-floating">
+                            <input class="form-control" type="text" placeholder="Email or Phone">
+                            <label for="">Email or Phone</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5>Registration</h5>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-6 mb-3 form-floating">
+                                    <input type="text" placeholder="First Name" class="form-control">
+                                    <label for="">First Name</label>
+                                </div>
+                                <div class="col-6 mb-3 form-floating">
+                                    <input type="text" placeholder="Last Name" class="form-control">
+                                    <label for="">Last Name</label>
+                                </div>
+                                <div class="col-12 mb-3 form-floating">
+                                    <input type="email" placeholder="Email" class="form-control">
+                                    <label for="">Email</label>
+                                </div>
+
+                                <div class="col-12 mb-3 form-floating">
+                                    <input type="tel" placeholder="Mobile No" class="form-control">
+                                    <label for="">Mobile NO</label>
+                                </div>
+
+                                <input type="submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 my-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Login</h5>
+                        <form action="">
+                            <div class="row mb-3">
+                                <label for="" class="col-3">Username</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="" class="col-3">Password</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control is-invalid">
+                                </div>
+                            </div>
+
+                            <input type="submit" class="btn btn-primary w-100">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -30,5 +137,15 @@
     </div>
 </body>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    let myrange = document.querySelector('#myrange')
+    let range = document.querySelector('#range')
+    let rangeValue = parseInt(myrange.value)
+
+    myrange.addEventListener('change', () => {
+        rangeValue = parseInt(myrange.value)
+        range.innerHTML = rangeValue
+    })
+</script>
 
 </html>
