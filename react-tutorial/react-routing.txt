@@ -1,0 +1,16 @@
+1. Install react router
+	npm install react-router-dom
+2. Go to app.jsx and import BrowserRouter from react-router-dom
+	import {BrowserRouter,Routes,Route} from react-router-dom
+3. Write a tag BrowserRouter and define the routes in it
+	<BrowserRouter>
+		<Routes>
+		
+		</Routes>
+	</BrowserRouter>
+4. Create routes
+	<Route path="path_to_the_page" element={<ComponentName />}></Route>
+5. Create links
+	Import Link from react-router-dom
+	<Link to="path_to_the_page"></Link>
+6. Put all links or the navbar inside BrowserRouter
