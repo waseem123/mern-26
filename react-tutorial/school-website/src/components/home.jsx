@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div>
+        <div className="container">
             <div className="row">
                 <div className="col-12">
                     <h1>Welcome to Home Page</h1>

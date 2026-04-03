@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (<nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme="dark"
@@ -10,13 +11,13 @@ export default function Navbar() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <Link to="/" class="nav-link active">Home</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <Link to="/about" class="nav-link" >About</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Services</a>
+                        <Link to="/services" class="nav-link">Services</Link>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
