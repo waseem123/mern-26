@@ -4,7 +4,7 @@ export default function Navbar() {
     return (<nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme="dark"
     >
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <Link to="/" class="navbar-brand">Navbar</Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,6 +18,9 @@ export default function Navbar() {
                     </li>
                     <li class="nav-item">
                         <Link to="/services" class="nav-link">Services</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link to="/courses" class="nav-link">Courses</Link>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
