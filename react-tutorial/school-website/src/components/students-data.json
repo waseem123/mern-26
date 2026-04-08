@@ -1,0 +1,182 @@
+[
+        {
+                "rollNo": 101,
+                "name": "Muzammil",
+                "marks": 88,
+                "city": "Solapur"
+        },
+        {
+                "rollNo": 102,
+                "name": "Maaz",
+                "marks": 98,
+                "city": "Mumbai"
+        },
+        {
+                "rollNo": 103,
+                "name": "Prathamesh",
+                "marks": 92,
+                "city": "Pune"
+        },
+        {
+                "rollNo": 104,
+                "name": "Vaishnavi",
+                "marks": 95,
+                "city": "Bengaluru"
+        },
+        {
+                "rollNo": 105,
+                "name": "Khadeja",
+                "marks": 91,
+                "city": "Hyderabad"
+        },
+        {
+                "rollNo": 106,
+                "name": "Shaheen",
+                "marks": 90,
+                "city": "Solapur"
+        },
+        {
+                "rollNo": 107,
+                "name": "Alex",
+                "marks": 50,
+                "city": "Latur"
+        },
+        {
+                "rollNo": 108,
+                "name": "Siddharth",
+                "marks": 85,
+                "city": "Pune"
+        },
+        {
+                "rollNo": 109,
+                "name": "Ananya",
+                "marks": 94,
+                "city": "Mumbai"
+        },
+        {
+                "rollNo": 110,
+                "name": "Rohan",
+                "marks": 78,
+                "city": "Solapur"
+        },
+        {
+                "rollNo": 111,
+                "name": "Megha",
+                "marks": 91,
+                "city": "Bengaluru"
+        },
+        {
+                "rollNo": 112,
+                "name": "Ishaan",
+                "marks": 65,
+                "city": "Nashik"
+        },
+        {
+                "rollNo": 113,
+                "name": "Zara",
+                "marks": 89,
+                "city": "Hyderabad"
+        },
+        {
+                "rollNo": 114,
+                "name": "Aditya",
+                "marks": 72,
+                "city": "Nagpur"
+        },
+        {
+                "rollNo": 115,
+                "name": "Sana",
+                "marks": 96,
+                "city": "Pune"
+        },
+        {
+                "rollNo": 116,
+                "name": "Vikram",
+                "marks": 55,
+                "city": "Latur"
+        },
+        {
+                "rollNo": 117,
+                "name": "Priya",
+                "marks": 83,
+                "city": "Mumbai"
+        },
+        {
+                "rollNo": 118,
+                "name": "Aryan",
+                "marks": 90,
+                "city": "Solapur"
+        },
+        {
+                "rollNo": 119,
+                "name": "Tanvi",
+                "marks": 77,
+                "city": "Bengaluru"
+        },
+        {
+                "rollNo": 120,
+                "name": "Kabir",
+                "marks": 88,
+                "city": "Chennai"
+        },
+        {
+                "rollNo": 121,
+                "name": "Neha",
+                "marks": 93,
+                "city": "Delhi"
+        },
+        {
+                "rollNo": 122,
+                "name": "Yash",
+                "marks": 61,
+                "city": "Pune"
+        },
+        {
+                "rollNo": 123,
+                "name": "Ayesha",
+                "marks": 82,
+                "city": "Hyderabad"
+        },
+        {
+                "rollNo": 124,
+                "name": "Rahul",
+                "marks": 45,
+                "city": "Mumbai"
+        },
+        {
+                "rollNo": 125,
+                "name": "Kiara",
+                "marks": 97,
+                "city": "Kolkata"
+        },
+        {
+                "rollNo": 126,
+                "name": "Arjun",
+                "marks": 74,
+                "city": "Solapur"
+        },
+        {
+                "rollNo": 127,
+                "name": "Riya",
+                "marks": 86,
+                "city": "Ahmedabad"
+        },
+        {
+                "rollNo": 128,
+                "name": "Sameer",
+                "marks": 69,
+                "city": "Nashik"
+        },
+        {
+                "rollNo": 129,
+                "name": "Isha",
+                "marks": 92,
+                "city": "Pune"
+        },
+        {
+                "rollNo": 130,
+                "name": "Manish",
+                "marks": 80,
+                "city": "Nagpur"
+        }
+]

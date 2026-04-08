@@ -5,6 +5,8 @@ import About from "./components/about";
 import Services from "./components/services";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Course from "./components/Course";
+import Courses from "./components/Courses";
+import Students from "./components/Students";
 export default function App() {
   return (
     <>
@@ -15,7 +17,8 @@ export default function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/services" element={<Services />}></Route>
-          <Route path="/courses" element={<Course />}></Route>
+          <Route path="/courses" element={<Courses />}></Route>
+          <Route path="/students" element={<Students />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
