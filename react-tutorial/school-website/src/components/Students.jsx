@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import allstudents from './students-data.json'
+import StudentDetails from './StudentDetails';
 
 
 export default function Students() {
@@ -7,6 +9,7 @@ export default function Students() {
         <td>{studentData.name}</td>
         <td>{studentData.marks}</td>
         <td>{studentData.city}</td>
+        <td><Link className='btn btn-primary btn-sm' to={`./${studentData.rollNo}`}>View</Link></td>
     </tr>)
     return (
         <div className="container mb-5">
@@ -20,6 +23,7 @@ export default function Students() {
                                 <th>Name</th>
                                 <th>Marks</th>
                                 <th>City</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

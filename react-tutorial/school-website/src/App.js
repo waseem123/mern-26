@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Course from "./components/Course";
 import Courses from "./components/Courses";
 import Students from "./components/Students";
+import StudentDetails from "./components/StudentDetails";
 export default function App() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/services" element={<Services />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/students" element={<Students />}></Route>
+          <Route path="/students/:rollno" element={<StudentDetails />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
