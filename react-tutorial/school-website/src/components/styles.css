@@ -1,0 +1,9 @@
+.f-letter {
+    background-color: crimson;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
