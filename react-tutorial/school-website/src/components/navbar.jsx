@@ -25,6 +25,10 @@ export default function Navbar() {
                     <li class="nav-item">
                         <Link to="/students" class="nav-link">Students</Link>
                     </li>
+
+                    <li class="nav-item">
+                        <Link to="/states" class="nav-link">States</Link>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

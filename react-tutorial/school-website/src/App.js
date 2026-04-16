@@ -8,6 +8,7 @@ import Course from "./components/Course";
 import Courses from "./components/Courses";
 import Students from "./components/Students";
 import StudentDetails from "./components/StudentDetails";
+import StateDemo from "./components/StateDemo";
 export default function App() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/students" element={<Students />}></Route>
           <Route path="/students/:rollno" element={<StudentDetails />}></Route>
+          <Route path="/states" element={<StateDemo />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
