@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-    return (<nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme="dark"
+    const [theme, setTheme] = useState("dark")
+    const [buttonText, setButtonText] = useState("LIGHT")
+    const changeTheme = () => {
+        setTheme((theme === "dark") ? "light" : "dark")
+        setButtonText((theme === "dark") ? "LIGHT" : "DARK")
+    }
+    return (<nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme={theme}
     >
         <div class="container-fluid">
             <Link to="/" class="navbar-brand">Navbar</Link>
@@ -34,6 +41,7 @@ export default function Navbar() {
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+                <button onClick={changeTheme} className="mx-2 btn btn-primary">{buttonText}</button>
             </div>
         </div>
     </nav>);
