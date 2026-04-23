@@ -11,10 +11,11 @@ import StudentDetails from "./components/StudentDetails";
 import StateDemo from "./components/StateDemo";
 import Parent from "./components/Parent";
 import Child from "./components/Child";
+import Master from "./components/Master";
+import Slave from "./components/Slave";
 export default function App() {
   return (
     <>
-
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -27,6 +28,8 @@ export default function App() {
           <Route path="/states" element={<StateDemo />}></Route>
           <Route path="/parent" element={<Parent />}></Route>
           <Route path="/child" element={<Child />}></Route>
+          <Route path="/master" element={<Master />}></Route>
+          <Route path="/slave" element={<Slave />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
