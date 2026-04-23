@@ -7,3 +7,11 @@
     font-size: 70px;
     text-align: center;
 }
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}

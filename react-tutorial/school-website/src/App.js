@@ -9,6 +9,8 @@ import Courses from "./components/Courses";
 import Students from "./components/Students";
 import StudentDetails from "./components/StudentDetails";
 import StateDemo from "./components/StateDemo";
+import Parent from "./components/Parent";
+import Child from "./components/Child";
 export default function App() {
   return (
     <>
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/students" element={<Students />}></Route>
           <Route path="/students/:rollno" element={<StudentDetails />}></Route>
           <Route path="/states" element={<StateDemo />}></Route>
+          <Route path="/parent" element={<Parent />}></Route>
+          <Route path="/child" element={<Child />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
