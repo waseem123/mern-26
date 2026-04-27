@@ -3,6 +3,7 @@ import Slave from "./Slave";
 
 export default function Master() {
     const [count, setCount] = useState(0)
+    
     const updateCount = () => {
         setCount(count + 1)
     }

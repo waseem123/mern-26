@@ -13,6 +13,7 @@ import Parent from "./components/Parent";
 import Child from "./components/Child";
 import Master from "./components/Master";
 import Slave from "./components/Slave";
+import ProductsPage from "./components/ProductsPage";
 export default function App() {
   return (
     <>
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/child" element={<Child />}></Route>
           <Route path="/master" element={<Master />}></Route>
           <Route path="/slave" element={<Slave />}></Route>
+          <Route path="/products" element={<ProductsPage />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
