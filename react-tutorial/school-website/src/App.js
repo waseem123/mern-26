@@ -14,6 +14,7 @@ import Child from "./components/Child";
 import Master from "./components/Master";
 import Slave from "./components/Slave";
 import ProductsPage from "./components/ProductsPage";
+import TodParent from "./components/TodoParent";
 export default function App() {
   return (
     <>
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/master" element={<Master />}></Route>
           <Route path="/slave" element={<Slave />}></Route>
           <Route path="/products" element={<ProductsPage />}></Route>
+          <Route path="/task-manager" element={<TodParent />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
