@@ -15,3 +15,25 @@
 .blue-text {
     color: blue;
 }
+
+.borderclass {
+    border: 1px solid black;
+    margin: 8px;
+    padding: 8px;
+}
+
+h1{
+    color: blue;
+}
+
+h2{
+    color: green;
+}
+
+h3{
+    color: red;
+}
+
+h4{
+    color: magenta;
+}
