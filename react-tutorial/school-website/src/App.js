@@ -16,6 +16,7 @@ import Slave from "./components/Slave";
 import ProductsPage from "./components/ProductsPage";
 import TodParent from "./components/TodoParent";
 import PropDrillingDemo from "./components/PropDrillingDemo";
+import ContextComponent from "./components/ContextComponent";
 export default function App() {
   return (
     <>
@@ -36,6 +37,8 @@ export default function App() {
           <Route path="/products" element={<ProductsPage />}></Route>
           <Route path="/task-manager" element={<TodParent />}></Route>
           <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
+          <Route path="/context-component" element={<ContextComponent />}></Route>
+
         </Routes>
         <Footer />
       </BrowserRouter>
