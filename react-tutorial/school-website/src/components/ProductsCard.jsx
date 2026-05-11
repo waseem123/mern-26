@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-export default function ProductsCard({ product,updateGlobalCount }) {
+export default function ProductsCard({ product, updateGlobalCount }) {
     const [localCount, updateCount] = useState(product.cartCount)
     const increaseCount = () => {
         if (localCount < 10) {
@@ -17,8 +18,10 @@ export default function ProductsCard({ product,updateGlobalCount }) {
             updateGlobalCount(-1)
         }
     }
+
+    let theme = useContext(ThemeContext)
     return (
-        <div className="card shadow-lg">
+        <div className="card shadow-lg" data-bs-theme={theme}>
             <img src="" className="card-img-top" alt="" />
             <div className="card-body">
                 <h5>{product.title}</h5>

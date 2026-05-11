@@ -2,9 +2,10 @@ import { useState } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
 import Parent from './Parent';
-export default function Home() {
+export default function Home({ currentTheme }) {
     const [imgWidth, setWidth] = useState("w-100")
 
+    
     let x = 100
     let d = ""
     if (x > 50) {

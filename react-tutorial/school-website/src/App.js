@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/child" element={<Child />}></Route>
           <Route path="/master" element={<Master />}></Route>
           <Route path="/slave" element={<Slave />}></Route>
-          <Route path="/products" element={<ProductsPage />}></Route>
+          <Route path="/products" element={<ProductsPage currentTheme="light" />}></Route>
           <Route path="/task-manager" element={<TodParent />}></Route>
           <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
           <Route path="/context-component" element={<ContextComponent />}></Route>
