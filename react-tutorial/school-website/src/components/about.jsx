@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import Card from "./Card";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function About() {
+    let theme = useContext(ThemeContext)
     return (
-        <div className="container">
+        <div className="container" data-bs-theme={theme}>
             <div className="row">
                 <h2>About Us</h2>
                 <div className="col-6">

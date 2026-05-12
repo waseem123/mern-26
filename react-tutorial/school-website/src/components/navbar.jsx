@@ -1,49 +1,55 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 
-export default function Navbar() {
+export default function Navbar({ updateTheme }) {
     const [theme, setTheme] = useState("dark")
     const [buttonText, setButtonText] = useState("LIGHT")
     const changeTheme = () => {
         setTheme((theme === "dark") ? "light" : "dark")
         setButtonText((theme === "dark") ? "LIGHT" : "DARK")
+        updateTheme(theme)
     }
-    return (<nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme={theme}
-    >
-        <div class="container-fluid">
-            <Link to="/" class="navbar-brand">Navbar</Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <Link to="/" class="nav-link active">Home</Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/about" class="nav-link" >About</Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/services" class="nav-link">Services</Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/courses" class="nav-link">Courses</Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/students" class="nav-link">Students</Link>
-                    </li>
 
-                    <li class="nav-item">
-                        <Link to="/states" class="nav-link">States</Link>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <button onClick={changeTheme} className="mx-2 btn btn-primary">{buttonText}</button>
+    let context_theme = useContext(ThemeContext)
+
+    return (
+        <nav class="navbar navbar-expand-lg text-bg-dark sticky-top" data-bs-theme={theme}
+        >
+            <div class="container-fluid">
+                <Link to="/" class="navbar-brand">Navbar</Link>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <Link to="/" class="nav-link active">Home</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/about" class="nav-link" >About</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/services" class="nav-link">Services</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/courses" class="nav-link">Courses</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/students" class="nav-link">Students</Link>
+                        </li>
+
+                        <li class="nav-item">
+                            <Link to="/states" class="nav-link">States</Link>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button onClick={changeTheme} className="mx-2 btn btn-primary">{buttonText}</button>
+                </div>
             </div>
-        </div>
-    </nav>);
+        </nav>);
 }
 

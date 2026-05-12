@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import allstudents from './students-data.json'
 import StudentDetails from './StudentDetails';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 
 export default function Students() {
+    let theme = useContext(ThemeContext)
     let studentDataRows = allstudents.map(studentData => <tr>
         <td>{studentData.rollNo}</td>
         <td>{studentData.name}</td>
@@ -12,7 +15,7 @@ export default function Students() {
         <td><Link className='btn btn-primary btn-sm' to={`./${studentData.rollNo}`}>View</Link></td>
     </tr>)
     return (
-        <div className="container mb-5">
+        <div className="container mb-5" data-bs-theme={theme}>
             <div className="row">
                 <div className="col-12">
                     <h1 className='display-1'>Students Information</h1>

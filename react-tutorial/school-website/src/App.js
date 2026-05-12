@@ -17,30 +17,38 @@ import ProductsPage from "./components/ProductsPage";
 import TodParent from "./components/TodoParent";
 import PropDrillingDemo from "./components/PropDrillingDemo";
 import ContextComponent from "./components/ContextComponent";
+import { useState } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 export default function App() {
+  const [currentTheme, updateCurrentTheme] = useState("light")
+  const setCurrentTheme = (theme) => {
+    updateCurrentTheme(theme)
+  }
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/services" element={<Services />}></Route>
-          <Route path="/courses" element={<Courses />}></Route>
-          <Route path="/students" element={<Students />}></Route>
-          <Route path="/students/:rollno" element={<StudentDetails />}></Route>
-          <Route path="/states" element={<StateDemo />}></Route>
-          <Route path="/parent" element={<Parent />}></Route>
-          <Route path="/child" element={<Child />}></Route>
-          <Route path="/master" element={<Master />}></Route>
-          <Route path="/slave" element={<Slave />}></Route>
-          <Route path="/products" element={<ProductsPage currentTheme="light" />}></Route>
-          <Route path="/task-manager" element={<TodParent />}></Route>
-          <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
-          <Route path="/context-component" element={<ContextComponent />}></Route>
+        <ThemeContext.Provider value={currentTheme}>
+          <Navbar updateTheme={setCurrentTheme} />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/services" element={<Services />}></Route>
+            <Route path="/courses" element={<Courses />}></Route>
+            <Route path="/students" element={<Students />}></Route>
+            <Route path="/students/:rollno" element={<StudentDetails />}></Route>
+            <Route path="/states" element={<StateDemo />}></Route>
+            <Route path="/parent" element={<Parent />}></Route>
+            <Route path="/child" element={<Child />}></Route>
+            <Route path="/master" element={<Master />}></Route>
+            <Route path="/slave" element={<Slave />}></Route>
+            <Route path="/products" element={<ProductsPage currentTheme="light" />}></Route>
+            <Route path="/task-manager" element={<TodParent />}></Route>
+            <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
+            <Route path="/context-component" element={<ContextComponent />}></Route>
 
-        </Routes>
-        <Footer />
+          </Routes>
+          <Footer />
+        </ThemeContext.Provider>
       </BrowserRouter>
 
     </>
