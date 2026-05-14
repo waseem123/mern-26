@@ -19,6 +19,7 @@ import PropDrillingDemo from "./components/PropDrillingDemo";
 import ContextComponent from "./components/ContextComponent";
 import { useState } from "react";
 import { ThemeContext } from "./context/ThemeContext";
+import UseEffectDemo from "./components/UseEffectDemo";
 export default function App() {
   const [currentTheme, updateCurrentTheme] = useState("light")
   const setCurrentTheme = (theme) => {
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/task-manager" element={<TodParent />}></Route>
             <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
             <Route path="/context-component" element={<ContextComponent />}></Route>
+            <Route path="/use-effect-demo" element={<UseEffectDemo />}></Route>
 
           </Routes>
           <Footer />
