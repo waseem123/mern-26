@@ -20,6 +20,8 @@ import ContextComponent from "./components/ContextComponent";
 import { useState } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import UseEffectDemo from "./components/UseEffectDemo";
+import Test from "./components/Test";
+import AutoSaveTest from "./components/AutoSaveTest";
 export default function App() {
   const [currentTheme, updateCurrentTheme] = useState("light")
   const setCurrentTheme = (theme) => {
@@ -47,7 +49,8 @@ export default function App() {
             <Route path="/prop-drilling" element={<PropDrillingDemo />}></Route>
             <Route path="/context-component" element={<ContextComponent />}></Route>
             <Route path="/use-effect-demo" element={<UseEffectDemo />}></Route>
-
+            <Route path="/test" element={<Test />}></Route>
+            <Route path="/auto-save" element={<AutoSaveTest />}></Route>
           </Routes>
           <Footer />
         </ThemeContext.Provider>
