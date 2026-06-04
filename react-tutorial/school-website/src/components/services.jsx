@@ -9,15 +9,15 @@ export default function Services() {
             <div className="row">
                 <h2>Services</h2>
                 <div className="col-4">
-                    <Card title="Web Development" description="Web Development service provided by InfoStack" />
+                    <Card no="1" title="Web Development" description="Web Development service provided by InfoStack" />
                 </div>
 
                 <div className="col-4">
-                    <Card title="Mobile App Development" description="Mobile App Development service provided by InfoStack" />
+                    <Card no="2" title="Mobile App Development" description="Mobile App Development service provided by InfoStack" />
                 </div>
 
                 <div className="col-4">
-                    <Card title="AI and ML" description="AI and ML service provided by InfoStack" />
+                    <Card no="3" title="AI and ML" description="AI and ML service provided by InfoStack" />
                 </div>
             </div>
         </div>
