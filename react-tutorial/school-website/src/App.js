@@ -22,6 +22,7 @@ import { ThemeContext } from "./context/ThemeContext";
 import UseEffectDemo from "./components/UseEffectDemo";
 import Test from "./components/Test";
 import AutoSaveTest from "./components/AutoSaveTest";
+import FetchDemo from "./components/FetchDemo";
 export default function App() {
   const [currentTheme, updateCurrentTheme] = useState("light")
   const setCurrentTheme = (theme) => {
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/use-effect-demo" element={<UseEffectDemo />}></Route>
             <Route path="/test" element={<Test />}></Route>
             <Route path="/auto-save" element={<AutoSaveTest />}></Route>
+            <Route path="/fetch-demo" element={<FetchDemo />}></Route>
           </Routes>
           <Footer />
         </ThemeContext.Provider>
