@@ -23,6 +23,7 @@ import UseEffectDemo from "./components/UseEffectDemo";
 import Test from "./components/Test";
 import AutoSaveTest from "./components/AutoSaveTest";
 import FetchDemo from "./components/FetchDemo";
+import FetchComponent from "./components/FetchComponent";
 export default function App() {
   const [currentTheme, updateCurrentTheme] = useState("light")
   const setCurrentTheme = (theme) => {
@@ -53,6 +54,7 @@ export default function App() {
             <Route path="/test" element={<Test />}></Route>
             <Route path="/auto-save" element={<AutoSaveTest />}></Route>
             <Route path="/fetch-demo" element={<FetchDemo />}></Route>
+            <Route path="/fetch-component" element={<FetchComponent />}></Route>
           </Routes>
           <Footer />
         </ThemeContext.Provider>
